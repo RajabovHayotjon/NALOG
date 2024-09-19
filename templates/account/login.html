@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="site-wrap" id="home-section">
+        <div class="site-mobile-menu site-navbar-target">
+            <div class="site-mobile-menu-header">
+                <div class="site-mobile-menu-close mt-3">
+                    <span class="icon-close2 js-menu-toggle"></span>
+                </div>
+            </div>
+            <div class="site-mobile-menu-body"></div>
+        </div>
+        <div class="hero overlay" style="background-image: url({% static 'images/hero_bg_1.jpg' %});">
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-lg-12">
+                        <div class="row align-items-center justify-content-center">
+                            <div class="col-lg-7 text-center intro">
+                                <div class="wrapper">
+                                    <form  enctype="multipart/form-data" method="post" >
+                                        {% csrf_token %}
+                                            <h1 style="color: #736b6b;"> Login</h1>
+                                        <div class="input-box">
+                                            {{ form.user }}
+{#                                            <input type="text" placeholder="Username" required>#}
+                                            <i class="bx bxs-user"></i>
+                                        </div>
+                                        <div class="input-box">
+                                            {{ form.password }}
+{#                                            <input type="password"#}
+{#                                                   placeholder="Password" required>#}
+                                            <i class="bx bxs-lock-alt"></i>
+                                        </div>
+                                        <div class="remenber-forgot">
+                                            <label><input type="checkbox">Remenber me</label>
+                                            <a href="#">Forgot password</a>
+                                        </div>
+                                        <button type="submit" class="btn">Login</button>
+                                        <div class="register-link">
+                                            <p>Do`nt have an account? <a href="{% url 'account:account_register' %}">Register</a></p>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

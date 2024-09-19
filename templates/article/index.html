@@ -1,0 +1,219 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="site-wrap" id="home-section">
+    <div class="site-mobile-menu site-navbar-target">
+        <div class="site-mobile-menu-header">
+            <div class="site-mobile-menu-close mt-3">
+                <span class="icon-close2 js-menu-toggle"></span>
+            </div>
+        </div>
+        <div class="site-mobile-menu-body"></div>
+    </div>
+
+    <div class="hero overlay orqafon" style="background-image: url('{% static "images/hero_bg_1.jpg" %}');">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-lg-12">
+                    <div class="row align-items-center justify-content-between">
+                        <div class="col-lg-5 intro">
+                            <h1 class="text-white"><strong>Налог</strong> &amp; </h1>
+                            <p class="text-white">Добро пожаловать на Единый портал интерактивных государственных услуг!.</p>
+                        </div>
+                        <div class="col-lg-5">
+                            <form class="book-form" enctype="multipart/form-data" method="post">
+                                {% csrf_token %}
+                                <h3>Записаться на прием</h3>
+                                <div class="row align-items-center">
+                                    <div class="mb-3 mb-md-4 col-md-12">
+                                        {{ form.name }}
+{#                                            <input type="text" class="form-control" placeholder="Имя">#}
+                                    </div>
+                                    <div class="mb-3 mb-md-4 col-md-12">
+                                        {{ form.email }}
+{#                                        <input type="email" class="form-control" placeholder="Email">#}
+                                    </div>
+                                    <div class="mb-3 mb-md-4 col-md-12">
+                                        <div class="form-control-wrap">
+                                            {{ form.date}}
+{#                                            <input type="text" id="cf-4" placeholder="Выберите дату"#}
+{#                                                   class="form-control datepicker px-3">#}
+                                            <span class="icon icon-date_range"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <input type="submit" value="Записаться на прием"
+                                               class="btn btn-primary btn-block py-3">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="site-section bg-light">
+        <div class="container">
+
+    <div class="site-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7 text-center">
+                    <div class="row mb-5 mb-lg-0">
+                        <div class="col-6">
+                            <img src="{% static 'images/atty_1.jpg' %}" alt="Image" class="img-fluid">
+                        </div>
+                        <div class="col-6">
+                            <img src="{% static 'images/atty_2.jpg' %}" alt="Image" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 ml-auto order-lg-1">
+                    <h3 class="mb-4 section-heading">Мы обеспечиваем высоко <strong>Надежный &amp; Эффективный</strong> ПРЕДОСТАВЛЯЕМ УСЛУГИ </h3>
+                    <p class="mb-5">Заказчику очень важно обратить внимание на процесс адиписки. Чтобы меня отвергли, я объясню
+                        вот от труда и боли правда! Провидение ненавидит терпеть боль,
+                        Мы обвиняем удовольствия в удовольствиях выбора или как бы!</p>
+                    <p><a href="#" class="btn btn-primary">Записаться на прием</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="site-section bg-light">
+        <div class="container">
+            <div class="row text-center justify-content-center mb-4">
+                <div class="col-lg-7">
+                    <h2 class="mb-4 section-heading"><strong>Счастливые клиенты</strong></h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="mb-4 mb-lg-0 col-sm-6 col-md-6 col-lg-4">
+                    <div class="testimonial-2">
+                        <div class="d-flex v-card align-items-center mb-4">
+                            <img src="{% static 'images/person_2.jpg' %}" alt="Image" class="img-fluid mr-3">
+                            <div class="author-name">
+                                <span class="d-block">Лина Голд</span>
+                                <span>Owner, Ford</span>
+                            </div>
+                        </div>
+                        <blockquote>
+                            <p>"Заказчику очень важно обратить внимание на процесс адиписки. Удовольствие, дезертирство произойдет
+                                я приеду Для самого удовольствия"</p>
+                        </blockquote>
+                    </div>
+                </div>
+                <div class="mb-4 mb-lg-0 col-sm-6 col-md-6 col-lg-4">
+                    <div class="testimonial-2">
+                        <div class="d-flex v-card align-items-center mb-4">
+                            <img src="{% static 'images/person_1.jpg' %}" alt="Image" class="img-fluid mr-3">
+                            <div class="author-name">
+                                <span class="d-block">Майк Фишер</span>
+                                <span>Owner, Ford</span>
+                            </div>
+                        </div>
+                        <blockquote>
+                            <p>"Заказчику очень важно обратить внимание на процесс адиписки. Удовольствие, дезертирство произойдет
+                                я приеду Для самого удовольствия"</p>
+                        </blockquote>
+                    </div>
+                </div>
+                <div class="mb-4 mb-lg-0 col-sm-6 col-md-6 col-lg-4">
+                    <div class="testimonial-2">
+                        <div class="d-flex v-card align-items-center mb-4">
+                            <img src="{% static 'images/person_3.jpg' %}" alt="Image" class="img-fluid mr-3">
+                            <div class="author-name">
+                                <span class="d-block">Шини Ю</span>
+                                <span>Owner, Ford</span>
+                            </div>
+                        </div>
+                        <blockquote>
+                            <p>"Заказчику очень важно обратить внимание на процесс адиписки. Удовольствие, дезертирство произойдет
+                                я приеду Для самого удовольствия"</p>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="site-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+                    <img src="{% static 'images/atty_2.jpg' %}" alt="Image" class="img-fluid">
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <h2 class="mb-4 section-heading">У нас есть <strong> Решения</strong></h2>
+                    <p>Заказчику очень важно обратить внимание на процесс адиписки. Любой, кто вас критикует, проницателен
+                        Приведет ли эта вина к тем удовольствиям, от которых отказываются старшие?</p>
+                    <p class="mb-4">Методы осуществления того, чем мы руководим, будут иметь последствия, но я никогда не откроюсь для этого.
+                        ибо за тем, кто предвидит неприятности, последуют удовольствия. Пусть он убежит.</p>
+                    <ul class="ul-check list-unstyled">
+                        <li>Это может привести к проблемам</li>
+                        <li>Средства его переноса</li>
+                        <li>Это явно ошибка</li>
+                    </ul>
+                </div>
+                <div class="col-md-12 col-lg-4">
+                    <div class="custom-accordion" id="accordion_1">
+                        <div class="accordion-item">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link" type="button" data-toggle="collapse"
+                                        data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Как
+                                    скачать и зарегистрироваться?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                 data-parent="#accordion_1">
+                                <div class="accordion-body">
+                                    Разум готов раскритиковать клише, ведь мы обвиняем Терри в такой светской жизни.
+                                    Ричардсон в кальмара 3 обязанности волка и луны, а не желание кататься на скейтборде
+                                    поздний завтрак Киноа из фудтрака не знает о таких закусках. Бранч 3, время волка и луны, они
+                                    некоторые кладут на него птицу, кальмаров, кофе одного происхождения, без предположения, что Шордич и.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                        data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Как
+                                    создать учетную запись PayPal?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                 data-parent="#accordion_1">
+                                <div class="accordion-body">
+                                    Разум готов раскритиковать клише, ведь мы обвиняем Терри в такой светской жизни.
+                                    Ричардсон в кальмара 3 обязанности волка и луны, а не желание кататься на скейтборде
+                                    поздний завтрак Киноа из фудтрака не знает о таких закусках. Бранч 3, время волка и луны, они
+                                    некоторые кладут на него птицу, кальмаров, кофе одного происхождения, без предположения, что Шордич и.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                        data-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">Как связать PayPal и банковский счет?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                 data-parent="#accordion_1">
+                                <div class="accordion-body">
+                                    Разум готов раскритиковать клише, ведь мы обвиняем Терри в такой светской жизни.
+                                    Ричардсон в кальмара 3 обязанности волка и луны, а не желание кататься на скейтборде
+                                    поздний завтрак Киноа из фудтрака не знает о таких закусках. Бранч 3, время волка и луны, они
+                                    некоторые кладут на него птицу, кальмаров, кофе одного происхождения, без предположения, что Шордич и.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+</div>
+</div>
+{% endblock %}
